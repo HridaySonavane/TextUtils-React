@@ -25,7 +25,7 @@ function About(props) {
     <div className={`container py-1 text-${props.mode === 'light'? 'dark':'light'}`}>
       <h1 className="m-3">About Us</h1>
 
-      <div className={`accordion`} id="accordionExample" data-bs-theme={`${props.mode === 'light'? 'light':'dark'}`} >
+      <div className={`accordion`} id="accordionExample" data-bs-theme={`${props.mode}`} >
         <div className="accordion-item">
           <h2 className="accordion-header">
             <button
