@@ -60,25 +60,25 @@ function TextForm(props) {
           ></textarea>
         </div>
 
-        <button onClick={handleUpClick} className="btn btn-primary mx-1">
+        <button onClick={handleUpClick} className={`btn btn-${props.mode === 'light'? 'dark':'light'} mx-1`}>
           Convert to UPPERCASE
         </button>
-        <button onClick={handleLoClick} className="btn btn-primary mx-1">
+        <button onClick={handleLoClick} className={`btn btn-${props.mode === 'light'? 'dark':'light'} mx-1`}>
           Convert to lowercase
         </button>
-        <button onClick={handleClClick} className="btn btn-primary mx-1">
+        <button onClick={handleClClick} className={`btn btn-${props.mode === 'light'? 'dark':'light'} mx-1`}>
           Clear the text area
         </button>
-        <button onClick={handleCopyClick} className="btn btn-primary mx-1">
+        <button onClick={handleCopyClick} className={`btn btn-${props.mode === 'light'? 'dark':'light'} mx-1`}>
           Copy Text
         </button>
-        <button onClick={handleCutClick} className="btn btn-primary mx-1">
+        <button onClick={handleCutClick} className={`btn btn-${props.mode === 'light'? 'dark':'light'} mx-1`}>
           Cut Text
         </button>
-        <button onClick={handleExtraText} className="btn btn-primary mx-1">
+        <button onClick={handleExtraText} className={`btn btn-${props.mode === 'light'? 'dark':'light'} mx-1`}>
           Remove Extra Spaces
         </button>
-        <button onClick={capitalize} className="btn btn-primary mx-1">
+        <button onClick={capitalize} className={`btn btn-${props.mode === 'light'? 'dark':'light'} mx-1`}>
           Capitalize the first word
         </button>
       </div>
