@@ -1,10 +1,10 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
-import About from "./components/About";
+// import About from "./components/About";
 import Alerts from "./components/Alerts";
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("light"); //state whether dark mode is enabled or not
