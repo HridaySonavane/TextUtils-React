@@ -60,25 +60,25 @@ function TextForm(props) {
           ></textarea>
         </div>
 
-        <button onClick={handleUpClick} className={`btn btn-${props.mode === 'light'? 'dark':'light'} mx-1`}>
+        <button onClick={handleUpClick} className={`btn btn-${props.mode === 'light'? 'outline-secondary':'outline-light'} mx-1 my-1`} >
           Convert to UPPERCASE
         </button>
-        <button onClick={handleLoClick} className={`btn btn-${props.mode === 'light'? 'dark':'light'} mx-1`}>
+        <button onClick={handleLoClick} className={`btn btn-${props.mode === 'light'? 'outline-secondary':'outline-light'} mx-1 my-1`} >
           Convert to lowercase
         </button>
-        <button onClick={handleClClick} className={`btn btn-${props.mode === 'light'? 'dark':'light'} mx-1`}>
+        <button onClick={handleClClick} className={`btn btn-${props.mode === 'light'? 'outline-secondary':'outline-light'} mx-1 my-1`} >
           Clear the text area
         </button>
-        <button onClick={handleCopyClick} className={`btn btn-${props.mode === 'light'? 'dark':'light'} mx-1`}>
+        <button onClick={handleCopyClick} className={`btn btn-${props.mode === 'light'? 'outline-secondary':'outline-light'} mx-1 my-1`} >
           Copy Text
         </button>
-        <button onClick={handleCutClick} className={`btn btn-${props.mode === 'light'? 'dark':'light'} mx-1`}>
+        <button onClick={handleCutClick} className={`btn btn-${props.mode === 'light'? 'outline-secondary':'outline-light'} mx-1 my-1`} >
           Cut Text
         </button>
-        <button onClick={handleExtraText} className={`btn btn-${props.mode === 'light'? 'dark':'light'} mx-1`}>
+        <button onClick={handleExtraText} className={`btn btn-${props.mode === 'light'? 'outline-secondary':'outline-light'} mx-1 my-1`} >
           Remove Extra Spaces
         </button>
-        <button onClick={capitalize} className={`btn btn-${props.mode === 'light'? 'dark':'light'} mx-1`}>
+        <button onClick={capitalize} className={`btn btn-${props.mode === 'light'? 'outline-secondary':'outline-light'} mx-1 my-1`} >
           Capitalize the first word
         </button>
       </div>
@@ -91,7 +91,7 @@ function TextForm(props) {
             <h1>Your content summary</h1>
             <p className="font-monospace">
               {/* the "text.split(" ").length" method converts the paragraph words into a string array */}
-              {text.split(" ").length} words and {text.length} characters
+              {text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters
             </p>
             <p className="font-monospace">
               Will took you {0.008 * text.split(" ").length} minutes to read this

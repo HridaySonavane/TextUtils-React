@@ -1,6 +1,14 @@
 import React, { useState } from "react";
+import "src/customscss/accordion.scss"
+
 
 function About(props) {
+  
+  const mystyle = {
+    backgroundColor: props.mode === 'dark'?'#242124':'white',
+    color: props.mode === 'dark'?'white':'#242124',
+  }
+  
   // const [myStyle, setMyStyle] = useState({
   //   color: "black",
   //   backgroundColor: "white",
@@ -25,7 +33,7 @@ function About(props) {
     <div className={`container py-1 text-${props.mode === 'light'? 'dark':'light'}`}>
       <h1 className="m-3">About Us</h1>
 
-      <div className={`accordion`} id="accordionExample" data-bs-theme={`${props.mode}`} >
+      <div className={`accordion`} id="accordionExample" >
         <div className="accordion-item">
           <h2 className="accordion-header">
             <button
@@ -35,7 +43,7 @@ function About(props) {
               data-bs-target="#collapseOne"
               aria-expanded="true"
               aria-controls="collapseOne"
-              
+              /* style={mystyle} */
             >
               Accordion Item #1
             </button>
@@ -44,7 +52,7 @@ function About(props) {
             id="collapseOne"
             className="accordion-collapse collapse show"
             data-bs-parent="#accordionExample"
-            
+            /* style={mystyle} */
           >
             <div className="accordion-body">
               <strong>This is the first item's accordion body.</strong> It is
@@ -67,7 +75,7 @@ function About(props) {
               data-bs-target="#collapseTwo"
               aria-expanded="false"
               aria-controls="collapseTwo"
-              
+              /* style={mystyle} */
             >
               Accordion Item #2
             </button>
@@ -76,7 +84,7 @@ function About(props) {
             id="collapseTwo"
             className="accordion-collapse collapse"
             data-bs-parent="#accordionExample"
-            
+            /* style={mystyle} */
           >
             <div className="accordion-body">
               <strong>This is the second item's accordion body.</strong> It is
@@ -99,7 +107,7 @@ function About(props) {
               data-bs-target="#collapseThree"
               aria-expanded="false"
               aria-controls="collapseThree"
-              
+              /* style={mystyle} */
             >
               Accordion Item #3
             </button>
@@ -108,7 +116,7 @@ function About(props) {
             id="collapseThree"
             className="accordion-collapse collapse"
             data-bs-parent="#accordionExample"
-            
+            /* style={mystyle} */
           >
             <div className="accordion-body">
               <strong>This is the third item's accordion body.</strong> It is
